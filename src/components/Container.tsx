@@ -6,7 +6,7 @@ interface Props{
 }
 const Container = ({update , answer ,deleteItem ,reset}:Props) => {
   return (
-    <div className="grid grid-cols-4 gap-4 grid-rows-5  bg-secondary p-4 rounded-xl justify-items-center">
+    <div className="grid grid-cols-4 gap-4 grid-rows-5  bg-secondary p-4 rounded-xl justify-items-center shadow-xl">
       <button className="numberbtn" onClick={()=>{update("7")}}>7</button>
       <button className="numberbtn" onClick={()=>{update("8")}}>8</button>
       <button className="numberbtn" onClick={()=>{update("9")}}>9</button>
