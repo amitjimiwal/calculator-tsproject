@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./App.css";
 import Container from "./components/Container";
 import View from "./components/View";
-import { isInteger } from "formik";
 
 function App() {
   const [commands,setcommands]=useState<Array<string>>([]);
@@ -41,7 +40,7 @@ const reset=()=>{
         <View display={commands}/>
       </div>
       <div className="w-full sm:w-96  md:w-[400px] ">
-        <Container updatecommand={setstate} answer={calculate} deleteItem={ItemDelete} reset={reset}/>
+        <Container update={setstate} answer={calculate} deleteItem={ItemDelete} reset={reset}/>
       </div>
      </div>
     </div>

@@ -1,7 +1,7 @@
 interface Props{
   display: string[];
 }
-type num= number | string;
+type num=string;
 const View = ({display}:Props) => {
   console.log("view render")
   return (
