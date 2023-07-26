@@ -2,9 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import Container from "./components/Container";
 import View from "./components/View";
-
-
 function App() {
+  const [history,sethistory]=useState<number>()
   const [commands, setcommands] = useState<Array<string>>([]);
   const setstate = (i: string) => {
     setcommands((prev) => {
@@ -22,6 +21,7 @@ function App() {
     try {
       const output = eval(commands.join(""));
       resultarr.push(output);
+      sethistory(output);
       setcommands(resultarr);
     } catch (error) {
       alert(error);
@@ -36,6 +36,7 @@ function App() {
     console.log(commands);
   };
   const reset = () => {
+    sethistory(0);
     setcommands([]);
   };
   return (
@@ -45,7 +46,7 @@ function App() {
       </h1>
       <div className="bg-primary p-7  flex flex-col gap-5 rounded-xl shadow-2xl">
         <div className="w-full sm:w-96 md:w-[400px]">
-          <View display={commands} />
+          <View display={commands} history={history}/>
         </div>
         <div className="w-full sm:w-96  md:w-[400px] ">
           <Container
