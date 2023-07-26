@@ -33,7 +33,7 @@ const reset=()=>{
   setcommands([])
 }
   return ( 
-    <div className="w-full h-screen flex flex-col justify-center items-center">
+    <div className="w-full h-screen flex flex-col justify-center items-center bg-parent">
       <h1 className="text-xl font-extrabold md:text-3xl mb-5">Calculator App</h1>
      <div className="bg-primary p-7  flex flex-col gap-5 rounded-xl">
      <div className="w-full sm:w-96 md:w-[400px]">

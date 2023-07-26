@@ -5,11 +5,15 @@
   scroll-behavior: smooth;
 }
 .numberbtn{
-   @apply bg-button border-2 border-button shadow-md rounded-xl text-secondary font-bold w-14 h-11;
+   @apply bg-button border-2 border-button shadow-xl rounded-xl text-secondary font-bold w-14 h-11;
 }
+
 .deletebtn{
-  @apply  bg-primary border-2 border-primary shadow-md rounded-xl text-white font-bold w-14 h-11;
+  @apply  bg-primary border-2 border-primary shadow-xl rounded-xl text-white font-bold w-14 h-11;
+}
+.deletebtn:active,.numberbtn:active,.bigbutton:active{
+  @apply shadow-sm
 }
 .bigbutton{
-  @apply shadow-md rounded-xl text-white font-bold col-span-2 justify-self-stretch;
+  @apply shadow-xl rounded-xl text-white font-bold col-span-2 justify-self-stretch;
 }

@@ -25,7 +25,7 @@ const Container = ({update , answer ,deleteItem ,reset}:Props) => {
       <button className="numberbtn" onClick={()=>{update("*")}}>X</button>
       <button className="bg-primary border-2 border-primary bigbutton" onClick={()=>{reset()}}>
        RESET </button>
-      <button className="bg-red-700 border-2 border-red-950 bigbutton" onClick={()=>{answer()}}>
+      <button className="bg-red-700 border-2 border-red-700 bigbutton" onClick={()=>{answer()}}>
         =   </button>
     </div>
   );
