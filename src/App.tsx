@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Container from "./components/Container";
 import View from "./components/View";
-import { comma } from "postcss/lib/list";
+
 
 function App() {
   const [commands, setcommands] = useState<Array<string>>([]);
@@ -21,7 +21,6 @@ function App() {
     const resultarr: string[] = [];
     try {
       const output = eval(commands.join(""));
-      console.log(commands.join(""));
       resultarr.push(output);
       setcommands(resultarr);
     } catch (error) {
@@ -44,7 +43,7 @@ function App() {
       <h1 className="text-xl font-extrabold md:text-3xl mb-5">
         Calculator App
       </h1>
-      <div className="bg-primary p-7  flex flex-col gap-5 rounded-xl">
+      <div className="bg-primary p-7  flex flex-col gap-5 rounded-xl shadow-2xl">
         <div className="w-full sm:w-96 md:w-[400px]">
           <View display={commands} />
         </div>
