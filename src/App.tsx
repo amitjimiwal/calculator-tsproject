@@ -1,4 +1,4 @@
-import { React,useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Container from "./components/Container";
 import View from "./components/View";
