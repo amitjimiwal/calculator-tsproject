@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { React,useState } from "react";
 import "./App.css";
 import Container from "./components/Container";
 import View from "./components/View";
@@ -41,7 +41,7 @@ function App() {
   };
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center bg-parent">
-      <h1 className="text-xl font-extrabold md:text-3xl mb-5">
+      <h1 className="text-xl font-extrabold md:text-3xl mb-5" data-testid="count">
         Calculator App
       </h1>
       <div className="bg-primary p-7  flex flex-col gap-5 rounded-xl shadow-2xl">
