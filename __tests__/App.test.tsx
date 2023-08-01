@@ -1,5 +1,5 @@
 import {render} from '@testing-library/react'
-import App from '../App'
+import App from '../src/App'
 import expect from 'expect';
 describe(App,()=>{
          it("app display calculator text",()=>{
