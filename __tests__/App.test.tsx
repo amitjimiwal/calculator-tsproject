@@ -73,4 +73,22 @@ describe(App, () => {
     const history = Number(screen.getByTestId("history").textContent);
     expect(history).toEqual(16);
   });
+  it('alerts if first operator is click', async () => {
+    const alertMock = jest.spyOn(window,'alert').mockImplementation(); 
+    render(<App/>)
+    const button2 = screen.getByRole("button", { name: "+" });
+    fireEvent.click(button2)
+    expect(alertMock).toHaveBeenCalledTimes(1)
+  })
+  it('alerts if operation starts from zero', async () => {
+    const alertMock = jest.spyOn(window,'alert').mockImplementation(); 
+    render(<App/>)
+    const button2 = screen.getByRole("button", { name: "0" })
+    const button = screen.getByRole("button", { name: "8" });
+    const answer = screen.getByRole("button", { name: "=" });
+    fireEvent.click(button2)
+    fireEvent.click(button)
+    fireEvent.click(answer);
+    expect(alertMock).toHaveBeenCalledTimes(1)
+  })
 });

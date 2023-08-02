@@ -5,6 +5,7 @@ import AnswerButton from "../src/components/AnswerButton";
 import DeleteButton from "../src/components/DeleteButton";
 import ResetButton from "../src/components/ResetButton";
 
+
 describe("Buttontest", () => {
   it("Number button working properly and rendering the text", () => {
     // creates a dummy  function to pass and test to the component
@@ -48,5 +49,5 @@ describe("Buttontest", () => {
     //check if onclick the  event is fired
     fireEvent.click(button);
     expect(mockfunction).toHaveBeenCalled();
-  });
+  });  
 });
