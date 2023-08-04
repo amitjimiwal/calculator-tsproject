@@ -82,8 +82,6 @@ git push origin feature/your-feature-name
 
 We appreciate your contributions, and together, we can make this Project even better!
 
-Sure, here's an example of how you can add a "Test Cases" section to your README.md file for the "calculator-tsproject" repository:
-
 ## Test Cases
 
 The calculator-tsproject comes with a comprehensive set of test cases to ensure the correctness and reliability of the application. The test cases are implemented using [Jest](https://jestjs.io/), a popular JavaScript testing framework.
